@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de bootstrap archivos compiladores</title>
+    <!--css bootstrap-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body>
+   <div class="container-fluid">
+       <!--Barra de navegacion-->
+        <nav class="navbar navbar-expand-md navbar-light bg-light border-2 border-bottom border-info">
+            <div class="container-fluid">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" fill="currentColor" type="button" class="bi bi-house-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                  </svg>
+                <a class="navbar-brand fw-bold fs-2 fst-italic" href="#">HAUSHA</a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#MenuNavegacion"> 
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div id="MenuNavegacion" class="collapse navbar-collapse">
+                    <a class="nav-link fw-bold " href="#">En venta</a>
+                    <a class="nav-link fw-bold" href="#">En renta</a>
+                    <a class="nav-link fw-bold" href="#">Valorar</a>
+                    <a class="nav-link fw-bold" href="#">Agencia</a>
+                    <a class="nav-link fw-bold" href="#">Servicios</a>
+                    
+                </div>
+                <div id="MenuNavegacion" class="collapse navbar-collapse justify-content-end">
+                        <div class="float-right">
+                            <button class="btn btn-outline-primary fw-bold" data-bs-toggle="modal" data-bs-target="#myModal">Iniciar sesion</button>
+                            <!-- The Modal -->
+                            <div class="modal " id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <div class="mx-auto">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="80" fill="currentColor" class="bi bi-person-circle text-primary" viewBox="0 0 16 16">
+                                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                                </svg>
+                                                <p class="fw-bold" id="dem">Iniciar sesion</p>
+                                            </div>
+                                        </div>
+                                
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Escriba su correo electronico" aria-describedby="emailHelp">
+                                                    
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Escriba su contraseña">
+                                                    <div id="emailHelp" class="form-text">Sus datos estan seguros.</div>
+                                                </div>
+                                                <button class="btn btn-primary">Iniciar sesion</button>
+                                            </form>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+                
+             
+            </div>
+        </nav>
+        
+        <nav class="navbar navbar-expand-md navbar-light bg-light border-info">
+            <div class="container-fluid">
+                <div id="MenuNavegacion" class="collapse navbar-collapse">
+                        <form class="d-flex collapse">
+                            <input class="form-control  me-2" type="search" placeholder="Buscar" aria-label="Search">
+                            <button class="btn btn-outline-primary me-2" type="submit">Buscar</button>
+                        </form>
+                        
+            
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-outline-primary me-2 dropdown-toggle" data-bs-toggle="dropdown">
+                                Comprar
+                            </button>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Compara</a></li>
+                            <li><a class="dropdown-item" href="#">Alquilar</a></li>
+                            </ul>
+                        </div>
+            
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-outline-primary me-2 dropdown-toggle" data-bs-toggle="dropdown">
+                                Casa
+                            </button>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Casa</a></li>
+                            <li><a class="dropdown-item" href="#">Departamento</a></li>
+                            <li><a class="dropdown-item" href="#">Casa  y departamento</a></li>
+                            <li><a class="dropdown-item" href="#">Nuevo proyecto-Casa</a></li>
+                            <li><a class="dropdown-item" href="#">Nuevo proyecto-Apartamento</a></li>
+                            <li><a class="dropdown-item" href="#">Garaje</a></li>
+                            <li><a class="dropdown-item" href="#">Oficina</a></li>
+                            <li><a class="dropdown-item" href="#">Negocio</a></li>
+                            <li><a class="dropdown-item" href="#">Industria</a></li>
+                            <li><a class="dropdown-item" href="#">Tierra</a></li>
+                            </ul>
+                        </div>
+            
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-outline-primary me-2 " data-bs-toggle="dropdown">
+                                Precio
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><span class="dropdown-item-text">Monto maximo</span></li>
+                            <li>
+                                <span class="dropdown-item-text"><input class="form-control  me-2" type="search" placeholder="Maximo" aria-label="Maximo"></span>
+                            </li>
+                            <li><span class="dropdown-item-text">Monto minimo</span></li>
+                            <li>
+                                <span class="dropdown-item-text"><input class="form-control  me-2" type="search" placeholder="Minimo" aria-label="Minimo">
+                                </span>
+                            </li>
+                                
+                            <li>
+                                <span class="dropdown-item-text"><button type="button" class="btn btn-primary">Solicitar</button></span>
+                            </li>
+                            </ul>
+                        </div>
+            
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-outline-primary me-2 " data-bs-toggle="dropdown">
+                                Dormitorio
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><span class="dropdown-item-text">Cantidad de dormitorios</span></li>
+                            <li>
+                                <span class="dropdown-item-text"><input class="form-control  me-2"  aria-label="domitorios"></span>
+                            
+                                <span class="dropdown-item-text"><button type="button" class="btn btn-primary">Solicitar</button></span>
+                            </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </nav>
+   </div>
+
+  <!--JS bootstrap-->
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script>document.getElementById("dem").innerHTML = "Administrador";</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre">
+        </div>
+        <div>
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" cols="30" rows="10"></textarea>
+        </div>
+        <button type="button" id="btnEnviar">Enviar</button>
+    </form>
+    <ul id="chatUl">
+    </ul>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+        import { getDatabase, set, get, onValue, ref, child, update, remove } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+       // Your web app's Firebase configuration
+       const firebaseConfig = {
+         apiKey: "AIzaSyDDY1JE2qqmJSkPEQjFQwlxwhBW6w7hMu8",
+         authDomain: "comentarios-8e9bd.firebaseapp.com",
+         projectId: "comentarios-8e9bd",
+         storageBucket: "comentarios-8e9bd.appspot.com",
+         messagingSenderId: "1059376818119",
+         appId: "1:1059376818119:web:135dad8a50ff4ed7621be2"
+       };
+
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+        const dbref = ref(db, "chat");
+
+        var txtNombre = document.getElementById("nombre");
+        var txtMensaje = document.getElementById("mensaje");
+        var btnEnviar = document.getElementById("btnEnviar");
+        var chatUl = document.getElementById("chatUl");
+
+        btnEnviar.addEventListener("click", function(){
+            var nombre = txtNombre.value;
+            var mensaje = txtMensaje.value;
+            var random;
+            var html = "<li><b>"+nombre+": </b>"+mensaje+"</li>";
+            var reff = ref(db);
+            get(child(reff, "chat")).then((snapshot)=>{
+                var filtro = [];
+                random = snapshot.val();
+                for(let fil in random){
+                    filtro.push(fil);
+                }
+                console.log(filtro.length);
+                set(ref(db, "chat/" + filtro.length),
+                    {
+                        name: nombre,
+                        message: mensaje
+                    }
+                );
+            });
+        });
+        
+        
+
+        onValue(dbref, (snapshot) => {
+            var html = '';
+            snapshot.forEach(e => {
+                var element = e.val();
+                var nombre = element.name;
+                var mensaje = element.message;
+                html += "<li><b>"+nombre+": </b>"+mensaje+"</li>";
+            });
+        chatUl.innerHTML = html;
+        });
+
+      </script>
+</body>
+</html>

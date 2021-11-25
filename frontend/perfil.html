@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HAUSHA</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/all.css"><!--FontAwesome-->
+    <link rel="stylesheet" href="css/main8.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">HAUSHA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          </li>
+        </ul>
+        <form id="navbar-form" class="d-flex">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="habitaciones.html">Propuestas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Contáctanos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img id="perfil1" src="img/perfil.png" alt="">Perfil
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="perfil.html">Editar Perfil</a></li>
+                <li><a class="dropdown-item" href="#">Reservaciones</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a type="button" class="dropdown-item" onclick="cerrarSesion();">Cerrar Sesion</a></li>
+              </ul>
+            </li>
+        </ul>
+          
+        </form>
+      </div>
+    </div>
+  </nav>
+
+      <section class="seccion-perfil-usuario">
+          <div class="perfil-usuario-header">
+              <div class="perfil-usuario-portada">
+                  <div id="imgPerfil" class="perfil-usuario-avatar">
+                      
+                  </div>
+                  <button type="button" class="boton-portada">
+                      <i class="far fa-image"></i> Cambiar fondo
+                  </button>
+              </div>
+          </div>
+          <div class="perfil-usuario-body">
+              <div id="perfilDatos" class="perfil-usuario-bio">
+                  
+              </div>
+              <div class="perfil-usuario-footer">
+                  <ul id="perfilContenedor1" class="lista-datos">
+                      
+                  </ul>
+                  <ul id="perfilContenedor2" class="lista-datos">
+                      
+                  </ul>
+              </div>
+          </div>
+      </section>
+
+      <div class="col" id="contenedor-acciones" style="color: black;">
+              
+      </div>
+  <!--====  End of tarjeta  ====-->
+        
+    <!-- Footer -->
+    <footer class="bg-light text-center text-black">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+    
+          <!-- Twitter -->
+          <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+    
+          <!-- Google -->
+          <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+    
+          <!-- Instagram -->
+          <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+    
+          <!-- Linkedin -->
+          <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+    
+          <!-- Github -->
+          <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+    
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+            repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+            eum harum corrupti dicta, aliquam sequi voluptate quas.
+          </p>
+        </section>
+        <!-- Section: Text -->
+    
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <!-- Content -->
+              <h6 class="text-uppercase font-weight-bold">Dirección</h6>
+              <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>Blv. Suyapa <br>
+                UNAH edificio B2</p>
+              </div>
+              <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <!-- Content -->
+              <h6 class="text-uppercase font-weight-bold">Contáctanos</h6>
+              <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>info@hausha.com <br>
+              Tel. 123-456-7890</p>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <!-- Content -->
+              <h6 class="text-uppercase font-weight-bold">HAUSHA</h6>
+              <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>@2021 by Hausha</p>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <!-- Content -->
+              <h6 class="text-uppercase font-weight-bold">Aceptamos</h6>
+              <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright:
+        <a class="text-black" href="#">HAUSHA</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+<!-- Footer -->
+
+<!-- Modal Registro-->
+<div class="modal fade" id="modalReservacion" tabindex="-1" role="dialog" aria-labelledby="modalRegistroLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalRegistroLabel">Reservacion Actual</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container" id="verReservacion">
+            <div class="row col-12">
+                <input class="form-control my-2" type="email" id="nombrePro" placeholder="Nombre">
+                <input class="form-control my-2" type="number" id="precioPro" placeholder="Precio">
+                <input class="form-control my-2" type="text" id="descripPro" placeholder="Descripcion">
+                <p>Seleccione el tipo de categoria:</p>
+                <select class="form-control my-2" id="selectPropuesta">
+
+                </select>
+                <p>Seleccione una imagen:</p>
+                <select class="form-control my-2" id="lista-imagenes">
+                  <option value="img/perfil/goku.jpg">Imagen 1</option>
+                  <option value="img/perfil/lufi.jpg">Imagen 2</option>
+                  <option value="img/perfil/naruto.jpg">Imagen 3</option>
+                </select>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+      </div>
+    </div>
+  </div>
+<div>
+
+    <script src="js/all.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/perfil.js"></script>
+</body>
+
+</html>

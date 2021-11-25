@@ -1,0 +1,106 @@
+
+body{
+    background: none;
+}
+
+.contenedor-contact{
+    background: url(../img/personas.jpeg);
+    background-size: cover;
+    color: white;
+    width: auto;
+    height: 20%;
+}
+
+.sombra{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.contenedor-contact h1{
+    display: inline-block;
+    margin-left: 40%;
+}
+
+
+.contenedor-info{
+    background-color: white;
+    width: 60%;
+    padding: 3rem;
+}
+
+.contenedor-redes{
+    float: left;
+    height: 100px;
+    background-color: blue;
+}
+
+.container{
+    /* display: flex; */
+    /* justify-content: center; */
+    background-color: #fff;
+    max-width: none;
+    padding: 1rem;
+    /* width: 80%; */
+    /* width: auto; */
+}
+
+.col-sm-7{
+    padding-right:2rem;
+    padding-left: 2rem;
+}
+
+.barra{
+    width: 90%;
+    margin-left: 5%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.288);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn-success{
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+@media (max-width:450px){
+    .contenedor-contact h1{
+        margin-left:9%;
+    }
+    
+}
+
+@media (max-width:600px){
+    .contenedor-contact h1{
+        margin-left:37%;
+    }
+  
+}
+
+
+@media (max-width:1000px){
+    .infoContenedor img{
+        display: none;
+    }
+    
+    .col-sm-7{
+        width: 95%;
+    }
+}
+
+.infoContenedor{
+    padding: 0 26px;
+}
+
+.msjContainer{
+    margin-top: 30px;
+}
+
+.infoContenedor img{
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+}

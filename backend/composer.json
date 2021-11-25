@@ -1,0 +1,7 @@
+{
+    "name": "mauricio/proyecto_hausha",
+    "description": "Proyecto de ingenieria del software",
+    "require": {
+        "kreait/firebase-php": "^5.25"
+    }
+}

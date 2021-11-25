@@ -1,0 +1,605 @@
+*
+{
+  box-sizing: border-box;
+  padding: 0; margin: 0;
+  transition: all ease .5s;
+}
+
+/*   _______
+    -COLORES-  */
+/*--------------FONDOS*/
+/*Naranja Heippi*/
+html, body, .contenedor, .naranja-heippi
+{
+  background-color: 
+    rgb(255, 102, 0);
+}
+/*Naranja Heippi Oscuro*/
+.naranja-oscuro
+{
+  background-color: 
+    rgb(255, 85, 0);
+}
+/*Naranja Heippi Claro*/
+.menu-lateral label[for*="ctrl"]:hover,
+.naranja-claro
+{
+  background-color: 
+    rgb(255,140,0)
+}
+/*Naranja heippi amarillo*/
+.naranja, 
+.menu-lateral li:first-child
+{
+  background-color: 
+    rgb(255,165,0);
+}
+/*Naranja oro*/
+.fondo-oro
+{
+  background-color: gold;
+}
+/*Rojo Negro*/
+.rojo-negro
+{
+  background-color: rgb(40, 0, 0);
+}
+/*Rojo*/
+.menu-superior li:last-child a
+{
+  background-color: 
+    rgb(235,65,65);
+}
+/*gris claro*/
+.menu
+{
+  background-color: gainsboro;
+}
+/*blanco humo*/
+nav.menu-superior ul,
+nav.menu-lateral ul
+{
+  background-color: whitesmoke;
+}
+/*Blanco*/
+.menu-lateral .btn-ctrl,
+.menu-lateral .btn-ctrl::before,
+.menu-lateral .btn-ctrl::after,
+.reporte-grafico
+{
+  background-color: rgb(255,255,255);
+  background-color: rgba(255,255,255,1);
+}
+/*--------------LETRAS*/
+/*Cafe*/
+html, body
+a:link,
+a:visited
+{
+  color: rgb(110,60,50);
+}
+/*blanco*/
+.menu-superior li:last-child a:link:last-child,
+.menu-superior li:last-child a:visited:last-child
+{
+  color: white;
+}
+/*rojo*/
+.menu-superior li:last-child a:hover:last-child
+{
+  color: rgb(235,65,65);
+}
+/*--------------GRADIANTES*/
+/*Gradiante gris*/
+.menu-superior a
+{
+  background-image: 
+    linear-gradient(to bottom, 
+    rgb(235,235,235) 0%, 
+    rgb(255,255,255) 3%, 
+    rgb(245,245,245) 50%, 
+    rgb(209,209,209) 51%, 
+    rgb(245,245,245) 97%, 
+    rgb(227,227,227) 100%);
+}
+/*amarillo*/
+.menu-superior a:focus,
+.menu-superior a:hover,
+.menu-superior li:last-child a:last-child:hover,
+/*In situ menu superior*/
+.informe .menu-superior li:first-child a:hover,
+.administrador .menu-superior li:nth-child(2) a:hover,
+.inicio .menu-superior li:nth-child(3) a:hover,
+.perfil .menu-superior li:last-child a:hover:first-child
+{
+  background-image: 
+    linear-gradient(to bottom, 
+    rgb(255,217,0) 0%, 
+    rgb(255,249,0) 3%, 
+    rgb(255,215,0) 50%, 
+    rgb(255,193,0) 51%, 
+    rgb(255,235,0) 97%, 
+    rgb(255,210,0) 100%);
+}
+/*rojo*/
+.menu-superior li:last-child a:last-child
+{
+  background-image: 
+    linear-gradient(to bottom, 
+    rgb(255,94,94) 0%, 
+    rgb(255,140,140) 3%, 
+    rgb(255,77,77) 50%, 
+    rgb(237,65,65) 51%, 
+    rgb(255,96,96) 97%, 
+    rgb(255,48,48) 100%);
+}
+
+/*  __________
+   -SELECTORES- */
+
+html, body
+{
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 10;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+a
+{
+  text-decoration: none;
+}
+body>input
+{
+  position: absolute;
+  top: -50px;
+  z-index: -10;
+}
+
+/*-INPUTS CONTROLADORES-*/
+
+input#ctrl-menu-lateral:focus ~ .contenedor
+label[for*="menu-lateral"] /*<--Activar menu lateral en moviles*/
+{
+  background-color: darkorange;
+}
+/*Abrir o cerrar btn*/
+input#ctrl-menu-lateral:checked ~ .contenedor .menu-lateral .btn-ctrl::before
+{
+  top: 0;
+  bottom: 0;
+  transform: rotate(45deg)
+}
+input#ctrl-menu-lateral:checked ~ .contenedor .menu-lateral .btn-ctrl::after
+{
+  top: 0;
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+input#ctrl-menu-lateral:checked ~ .contenedor
+.menu-lateral .btn-ctrl
+{
+  background-color: rgba(255,255,255,0);
+}
+
+/*  __________
+   -ESTRUCTURA- */
+
+.contenedor
+{
+  height: 100%;
+  width: 100%;
+  min-width: 26rem;
+  margin: auto;
+  position: relative;
+  z-index: 20;
+}
+
+.headermain
+{
+  height: 100%;
+  margin-bottom: -3rem;
+  padding-bottom: 6rem;
+  position: relative;
+  z-index: 30;
+}
+
+header, nav, main, footer
+{  
+  position: relative;
+  z-index: 40;
+}
+
+header
+{
+  min-height: 3rem;
+  z-index: 60;
+}
+
+footer
+{
+  z-index: 60;
+}
+
+footer, .stickyfooter
+{
+  height: 3rem;
+}
+
+nav.menu-lateral, main
+{
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+}
+
+nav.menu-lateral
+{
+  width: 12.5rem;
+  z-index: 50;
+  padding-left: 0.3rem;
+}
+
+main
+{
+  width: 100%;
+  padding-left: 12.5rem;
+  margin-left: -12.5rem;
+}
+
+/*  ===========
+    -SECCIONES-
+    ===========  
+/*  __________
+   -​ENCABEZADO- */
+
+/*-logo HEIPPI-*/
+
+a.logo
+{
+  height: 3rem;
+  width: 12.5rem;
+  padding: 0.2rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.logo img
+{
+  width: auto;
+  height: 100%;
+  display: inline-block;
+}
+/*-Menu Superior-*/
+
+nav.menu-superior
+{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding-top: .4rem;
+  padding-left: 12.5rem;
+  margin-left: -12.5rem;
+  vertical-align: bottom;
+}
+
+.menu-superior ul
+{
+  min-height: 100%;
+  overflow: hidden;
+  border-radius: .5rem 1rem 0 0;
+}
+
+.menu-superior li,
+.menu-superior li:last-child a
+{
+  height: 100%;  
+  list-style: none;
+}
+
+.menu-superior li,
+.menu-superior li:last-child a
+{
+  float: left;
+}
+
+.menu-superior li:last-child
+{
+  float: right;
+}
+
+.menu-superior a
+{
+  display: inline-block;
+  background-color: white;
+  line-height: 2.7rem;
+  padding: 0 1rem;
+  box-shadow: 
+    inset gainsboro 0.1rem 0 0,
+    inset white -0.05rem 0 0;
+}
+.menu-superior a:hover
+{
+  box-shadow: none
+    /*inset gold 0.1rem 0 0,
+    inset yellow -0.1rem 0 0*/;
+}
+
+.menu-superior li:last-child a:last-child,
+.menu-superior li:last-child a:last-child:hover
+{
+  box-shadow: none;
+}
+
+.menu-superior a:first-child::before,
+.menu-superior a:first-child::after
+{
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: -.3rem;
+  background-color: transparent;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.menu-superior a:first-child::before
+{
+  display: none;  
+}
+
+/*iconos menu-superior*/
+
+.menu-superior li:first-child a::before,
+.menu-superior li:first-child a::after
+{/*Icono de informe*/
+  background-image:     
+ url(https://i.imgur.com/vlHBpfd.png);
+}
+
+.menu-superior li:nth-child(2) a::before,
+.menu-superior li:nth-child(2) a::after
+{/*Icono de administrador*/
+  background-image: url('https://i.imgur.com/914L0GR.png');
+}
+
+.menu-superior li:nth-child(3) a::before,
+.menu-superior li:nth-child(3) a::after
+{/*Icono de Inicio*/
+  background-image:     url('https://i.imgur.com/uy9JbqH.png');
+}
+
+.menu-superior li:last-child a:first-child::before,
+.menu-superior li:last-child a:first-child::after
+{/*Icono de Perfil*/
+  background-image: url('https://i.imgur.com/Pdvr4N7.png');
+}
+
+/*  ____
+   -​MAIN-  */
+
+/*Menu lateral*/
+
+.menu-lateral ul
+{
+  min-height: 100%;
+  overflow: hidden;
+  border-radius: 0.5rem 0 0 0.5rem;
+  box-shadow: 
+    rgba(0,0,0,0.05) 0.3rem 0 0,
+    rgba(0,0,0,0.05) 0.2rem 0 0,
+    rgba(0,0,0,0.05) 0.1rem 0 0;
+}
+
+.menu-lateral h4
+{
+  font-weight: normal;
+  padding: 0 1rem;
+  text-transform: uppercase;
+  display: block;
+  width: 70%;
+}
+
+.menu-lateral h4,
+.menu-lateral label[for*="ctrl"]
+{  
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+.menu-lateral label[for*="ctrl"]
+{
+  display: none;
+  width: 30%;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  color: transparent;
+  box-shadow:
+    inset darkorange 0.1rem 0 0,
+    inset #ffb900 0.15rem 0 0,
+    inset darkorange 0 -0.15rem 0;
+}
+.menu-lateral label[for*="ctrl"]::after
+{
+  content: '1';
+}
+
+.menu-lateral .btn-ctrl,
+.menu-lateral .btn-ctrl::before,
+.menu-lateral .btn-ctrl::after
+{ 
+  position: absolute; 
+  display: block;
+  width: 2rem;
+  height: 0.2rem;
+}
+
+.menu-lateral .btn-ctrl
+{  
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%);  
+}
+
+.menu-lateral .btn-ctrl::before,
+.menu-lateral .btn-ctrl::after
+{
+  content: '';
+  transition: all ease .5s;
+}
+
+.menu-lateral .btn-ctrl::before
+{
+  bottom: -0.5rem;
+}
+
+.menu-lateral .btn-ctrl::after
+{
+  top: -0.5rem;
+}
+
+.menu-lateral a
+{
+  display: block;
+  padding: 1rem 1.3rem;
+  box-shadow: 
+    inset white 0 0.1rem 0,
+    inset #e5e5e5 0 -0.1rem 0;
+}
+
+/*reporte gráfico*/
+
+.reporte-grafico
+{
+  background-image:
+    url('https://i.imgur.com/QcOqvcP.png'),
+    url('https://i.imgur.com/QcOqvcP.png');
+  background-size: 100% 1.5%;
+  background-repeat: no-repeat;
+  background-position: top, bottom;
+  height: 100%;
+  padding: 3% 0;
+}
+/*  ______
+   -​FOOTER- */
+footer
+{
+  background-color: ;
+}
+/*=================
+  -ACTIVAR EN SITU-
+===================*/
+
+.informe .menu-superior li:first-child a,
+.administrador .menu-superior li:nth-child(2) a,
+.inicio .menu-superior li:nth-child(3) a,
+.perfil .menu-superior li:last-child a:first-child
+{
+  background-color: gold;
+  background-image:
+    linear-gradient(to bottom,
+    rgba(255,209,0,1) 0%,
+    rgba(255,233,0,1) 3%,
+    rgba(255,199,0,1) 50%,
+    rgba(255,166,0,1) 51%,
+    rgba(255,221,0,1) 97%,
+    rgba(255,201,0,1) 100%);
+  box-shadow: 
+    inset #ffaa00 0 -0.3rem 0;
+}
+
+.informe .menu-superior li:first-child a:hover,
+.administrador .menu-superior li:nth-child(2) a:hover,
+.inicio .menu-superior li:nth-child(3) a:hover,
+.perfil .menu-superior li:last-child a:hover:first-child
+{
+  box-shadow: 
+    inset yellow 0.1rem 0 0,
+    inset gold -0.1rem 0 0;
+}
+
+@media screen and (max-width : 47rem) /* ~740px*/
+  {    
+    /*-header-*/
+    
+    header
+    {
+      min-height: 3.8rem;
+    }
+    
+    a.logo
+    {
+      height: 3.5rem;
+      padding: 0.1rem 0 0;
+    }
+    
+    .menu-superior a
+    {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      padding: 0 0.8rem;
+      line-height: 2rem;
+      background: linear-gradient(to bottom, #f6f6f6 0%,#ffffff 4%,#ffffff 4%,#e1e1e1 96%,#f6f6f6 100%);
+    }
+    
+    .menu-superior a:first-child::before
+    {
+      display: block;
+      width: 100%;
+      height: 1.5rem;
+      background-size: auto 100%;
+      margin: .5rem 0 -0.5rem;
+    }
+    
+    .menu-superior a:first-child::after
+    {
+      display: none;  
+    }
+    
+    .menu-superior li:last-child a:last-child
+    {
+      font-size: 2rem;
+      line-height: 3.5rem;
+    }
+    /*menu-lateral*/
+    .menu-lateral label[for*="ctrl"]
+    {
+      display: inline-block;
+    }
+  }
+
+@media screen and (max-width : 39rem) /* ~620px*/
+  {
+    header
+    {
+      min-height: 6.8rem;
+    }
+    
+    a.logo
+    {
+      display: block;
+      width: initial;
+      padding: 0.4rem 0 0;
+    }
+    
+    nav.menu-superior
+    {
+      height: initial;
+      width: inherit;
+      display: block;
+    }
+    
+    .menu-superior ul
+    {
+      width: 98%;
+      margin: auto;
+    }
+  }

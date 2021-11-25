@@ -1,0 +1,142 @@
+#search{
+    border-radius: 40px;  
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url(../img/personas.jpeg)repeat;
+    background-size: cover;
+}
+#eslogan{
+    padding-top: 5rem;
+    padding-bottom: .5rem;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+#pregunta{
+    padding-top: .5rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+.navbar-light .navbar-nav .nav-link.active:hover{
+    color: rgb(107, 201, 255);
+}
+.navbar-light .navbar-brand:hover{
+    color: rgb(107, 201, 255);
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: rgb(107, 201, 255);
+}
+#carouselExampleIndicators{
+    z-index: 1;
+    font-family: "Candara", sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 600px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+.icons i{
+    color: rgb(46, 46, 46);
+    font-size: 20px;
+    transition: 0.8s;
+    transition-property: color, transform;
+}
+.icons i:hover{
+    color: #06C5CF;
+    transform: scale(1.3);
+}
+#pie-de-pagina{
+    background-color: rgb(247, 247, 247);
+}
+#nav-text:hover{
+    color: #06C5CF;
+}
+#img{
+    width: 10%;
+    height: 10%;
+}
+.card{
+    background-color: transparent;
+    border: 0;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding-top: 1rem;
+    padding-right: 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#img-carrusel{
+    width: 300px;
+    height: 350px;
+}
+#contenedor-info{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.card-img-top{
+    width: 100px;
+    height: 100px;
+}
+#card-cont{
+    align-content: center;
+}
+#perfil{
+    width: 30px;
+    border-radius: 50%;
+    padding-right: 5px;
+    padding-bottom: 1px;
+}
+
+/*************************/
+#contenedor-cuerpo{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0;
+    font-family: "Candara", sans-serif;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+#cont-date{
+    width: 100%;
+    max-width: 14rem;
+    padding: 0;
+    margin: 0;
+}
+.card
+{
+    width: 100%;
+}
+#izquierda{
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    max-height: 400px;
+    
+}
+#derecha img, #img-hab2{
+    width: 20px;
+    height: 20px;
+    align-items: center;
+}

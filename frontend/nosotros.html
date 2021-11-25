@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HAUSHA</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/all.css"><!--FontAwesome-->
+    <link rel="stylesheet" href="css/main6.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">HAUSHA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          </li>
+        </ul>
+        <form id="navbar-form" class="d-flex">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-current="page" href="#">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="habitaciones.html">Propuestas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Contáctanos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img id="perfil" src="img/perfil.png" alt="">Perfil
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
+                <li><a class="dropdown-item" href="#">Reservaciones</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a type="button" class="dropdown-item" onclick="cerrarSesion();">Cerrar Sesion</a></li>
+              </ul>
+            </li>         
+          </ul>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<div id="contenedor-cuerpo">
+  <!--
+    <div id="eslogan">
+        <h1>No Hay Nada Mejor Que El Hogar Conocenos</h1>
+    </div>
+  -->
+    <div id="contenedor-info">
+        <div class="container-fluid" id="contenedor-apps2">
+            <div class="container text-center text-md-left mt-5">
+                <div class="row mt-3 dark-grey-text">
+
+                  <h1>Misión, visión, valores</h1>
+
+                  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 ">
+                    <div class="card" style="width: 18rem;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="70" fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/>
+                        <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"/>
+                      </svg>
+                        <div class="card-body">
+                          <hr>
+                          <h5 class="card-title">Nuestra Misión</h5>
+                          <p class="card-text">
+                            Proporcionar un asesoramiento integral, a personas y empresas, que permita solucionar todas sus necesidades relacionadas con el mercado inmobiliario. Aportándoles una mayor rentabilidad basada en la responsabilidad y la trasparencia.
+                          </p>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <div class="card" style="width: 18rem;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="70" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" class=""/>
+                      </svg>
+                        <div class="card-body">
+                          <hr>
+                          <h5 class="card-title">Nuestra Visión</h5>
+                          <p class="card-text">
+                            Convertirnos en la empresa de referencia del sector inmobiliario en la país, con objeto de que las personas que intervienen en este mercado piensen en nosotros como primera opción en el momento de vender, comprar o alquilar una vivienda.
+                          </p>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-justify">
+                    <div class="card" style="width: 18rem;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="70" fill="currentColor" class="bi bi-gem" viewBox="0 0 16 16">
+                        <path d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6l3-4zm11.386 3.785-1.806-2.41-.776 2.413 2.582-.003zm-3.633.004.961-2.989H4.186l.963 2.995 5.704-.006zM5.47 5.495 8 13.366l2.532-7.876-5.062.005zm-1.371-.999-.78-2.422-1.818 2.425 2.598-.003zM1.499 5.5l5.113 6.817-2.192-6.82L1.5 5.5zm7.889 6.817 5.123-6.83-2.928.002-2.195 6.828z"/>
+                      </svg>
+                        <div class="card-body">
+                          <hr>
+                          <h5 class="card-title">Nuestros Valores</h5>
+                          <p class="card-text">
+                            - Transparencia <br>
+                            - Ética  <br>
+                            - Honestidad <br>
+                            - Profesionalidad <br>
+                            – Eficiencia <br>
+                            - Responsabilidad <br>
+                            - Social Cercanía
+                          </p>
+                        </div>
+                      </div>
+                  </div>
+                  <hr>
+                    <h3>Nuestros Compromisos</h3>
+                    <p class="text-justify">
+                      Como Agentes Inmobiliarios, nos comprometemos a representar en exclusiva los intereses del vendedor o comprador, que previamente nos haya otorgado un mandato en firme para la venta o adquisición de una propiedad. <br>
+
+                      Asesoramos y vendemos inmuebles con profesionalidad, trasparencia y responsabilidad. Ahorramos tiempo a nuestros Clientes y les garantizamos el mejor precio de mercado. Trabajamos de forma personalizada y nos encargamos de TODO el proceso, con objeto de lograr la máxima rentabilidad para cada propietario. <br>
+
+                      Ponemos todos nuestros recursos, tanto materiales como técnicos y humanos, al servicio de nuestros Clientes, a los que informamos con diligencia y trasparencia de todas nuestras actividades, así como de las respuestas que vayamos obteniendo en el desempeño de dichas acciones y de cualquier circunstancia que pueda afectar a la operación inmobiliaria en la que se encuentran inmersos.  
+                    </p>
+                  
+                </div>
+            </div>      
+        </div> 
+    </div>
+</div>
+        
+<!-- Footer -->
+<footer class="bg-light text-center text-black">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+        eum harum corrupti dicta, aliquam sequi voluptate quas.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">Dirección</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>Blv. Suyapa <br>
+            UNAH edificio B2</p>
+          </div>
+          <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">Contáctanos</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>info@hausha.com <br>
+          Tel. 123-456-7890</p>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">HAUSHA</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>@2021 by Hausha</p>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">Aceptamos</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 Copyright:
+    <a class="text-black" href="#">HAUSHA</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+<!-- Modal Registro-->
+<div class="modal fade" id="modalReservacion" tabindex="-1" role="dialog" aria-labelledby="modalRegistroLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalRegistroLabel">Reservacion Actual</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container" id="verReservacion">
+            <div class="row col-12">
+                <input class="form-control my-2" type="email" id="nombrePro" placeholder="Nombre">
+                <input class="form-control my-2" type="number" id="precioPro" placeholder="Precio">
+                <input class="form-control my-2" type="text" id="descripPro" placeholder="Descripcion">
+                <p>Seleccione el tipo de categoria:</p>
+                <select class="form-control my-2" id="selectPropuesta">
+
+                </select>
+                <p>Seleccione una imagen:</p>
+                <select class="form-control my-2" id="lista-imagenes">
+                  <option value="img/perfil/goku.jpg">Imagen 1</option>
+                  <option value="img/perfil/lufi.jpg">Imagen 2</option>
+                  <option value="img/perfil/naruto.jpg">Imagen 3</option>
+                </select>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+      </div>
+    </div>
+  </div>
+<div>
+
+    <script src="js/all.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/nosotros.js"></script>
+ 
+</body>
+
+</html>
